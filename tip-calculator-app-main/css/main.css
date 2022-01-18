@@ -1,2 +1,18 @@
+html {
+  font-size: 10px;
+  font-family: "Space Mono";
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #26c0ab;
+}
+
+#spliter .logo__container {
+  display: flex;
+  justify-content: center;
+  background-color: #26c0ab;
+}
 /*# sourceMappingURL=main.css.map */
