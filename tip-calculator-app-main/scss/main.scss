@@ -1,4 +1,6 @@
 @import "variables";
+@import "input";
+@import "label";
 
 
 html {
@@ -19,6 +21,21 @@ body {
     display: flex;
     justify-content: center;
     background-color: $primary;
+  }
+
+  & .calc__container {
+    max-width: 100%;
+    min-height: 80vh;
+    background-color: #FFF;
+    margin-top: 2.5rem;
+    padding: 3.5rem;
+    border-radius: 2rem;
+
+    & .bill {
+      display: flex;
+      flex-direction: column;
+
+    }
   }
 
 

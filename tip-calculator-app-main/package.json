@@ -17,6 +17,7 @@
     "defaults"
   ],
   "dependencies": {
+    "caniuse-lite": "^1.0.30001251",
     "normalize.css": "^8.0.1"
   }
 }

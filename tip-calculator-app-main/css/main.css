@@ -1,3 +1,19 @@
+.input {
+  background-color: #e9f4f6;
+  font-size: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #808080;
+}
+
 html {
   font-size: 10px;
   font-family: "Space Mono";
@@ -14,5 +30,17 @@ body {
   display: flex;
   justify-content: center;
   background-color: #26c0ab;
+}
+#spliter .calc__container {
+  max-width: 100%;
+  min-height: 80vh;
+  background-color: #FFF;
+  margin-top: 2.5rem;
+  padding: 3.5rem;
+  border-radius: 2rem;
+}
+#spliter .calc__container .bill {
+  display: flex;
+  flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */
