@@ -1,0 +1,14 @@
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: $VeryDarkCyan;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 700;
+  font-family: $FontPrimary
+}
+
+.btn.active {
+  background-color: $primary;
+}

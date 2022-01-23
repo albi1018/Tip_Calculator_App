@@ -1,17 +1,40 @@
 .input {
   background-color: #e9f4f6;
   font-size: 16px;
+  font-family: "Space Mono";
   padding: 1rem;
   margin: 1rem 0;
   border: none;
   border-radius: 0.5rem;
   outline: none;
+  text-align: right;
 }
 
 .label {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
   color: #808080;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #00494d;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 700;
+  font-family: "Space Mono";
+}
+
+.btn.active {
+  background-color: #26c0ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,9 +43,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background-color: #26c0ab;
 }
 
@@ -30,6 +50,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #26c0ab;
+  margin-top: 2rem;
 }
 #spliter .calc__container {
   max-width: 100%;
@@ -42,5 +63,41 @@ body {
 #spliter .calc__container .bill {
   display: flex;
   flex-direction: column;
+}
+#spliter .calc__container .selectTip__buttons {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 1.5rem;
+}
+#spliter .calc__container .selectTip__buttons .button__container .selectTip__input {
+  width: 100%;
+  font-size: 1.8rem;
+  border: none;
+  background-color: #e9f4f6;
+  padding: 0.7rem 1rem;
+  outline: none;
+  text-align: right;
+  border-radius: 1rem;
+  font-family: "Space Mono";
+}
+#spliter .calc__container .numberOfPeople {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+#spliter .calc__container .summary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  background-color: #00494d;
+}
+#spliter .calc__container .summary__content {
+  display: flex;
+}
+#spliter .calc__container .summary__content .summary__text {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */

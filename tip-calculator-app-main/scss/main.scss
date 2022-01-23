@@ -1,17 +1,19 @@
 @import "variables";
 @import "input";
 @import "label";
+@import "button";
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 10px;
   font-family: $FontPrimary;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background-color: $primary;
 }
 
@@ -21,6 +23,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: $primary;
+    margin-top: 2rem;
   }
 
   & .calc__container {
@@ -36,7 +39,55 @@ body {
       flex-direction: column;
 
     }
+
+    & .selectTip {
+
+      &__buttons {
+        //display: flex;
+        //flex-wrap: wrap;
+        display: grid;
+        grid-template-rows:  1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        margin-top: 1.5rem;
+
+        & .button__container {
+
+          & .selectTip__input {
+            width: 100%;
+            font-size: 1.8rem;
+            border: none;
+            background-color: $LightGrayishCyan;
+            padding: .7rem 1rem;
+            outline: none;
+            text-align: right;
+            border-radius: 1rem;
+            font-family: $FontPrimary;
+          }
+        }
+      }
+    }
+
+    & .numberOfPeople {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.5rem;
+    }
+
+    & .summary {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.5rem;
+      background-color: $VeryDarkCyan;
+
+      &__content {
+        display: flex;
+
+        & .summary__text {
+          color: #FFFFFF;
+        }
+      }
+    }
   }
-
-
 }

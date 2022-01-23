@@ -12,8 +12,6 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 <body>
   <div id="spliter">
@@ -25,7 +23,41 @@
         <label class="label" for="bill">Bill</label>
         <input class="bill__input input" type="text" name="bill" id="bill">
       </div>
+      <div class="selectTip">
+        <p class="label">Select Tip %</p>
+        <div class="selectTip__buttons">
+          <div class="button__container">
+            <button class="btn">5%</button>
+          </div>
+          <div class="button__container">
+            <button class="btn">10%</button>
+          </div>
+          <div class="button__container">
+            <button class="btn">15%</button>
+          </div>
+          <div class="button__container">
+            <button class="btn">25%</button>
+          </div>
+          <div class="button__container">
+            <button class="btn">50%</button>
+          </div>
+          <div class="button__container">
+            <input class="selectTip__input" placeholder="Custom" input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="numberOfPeople">
+        <label class="label" for="people">Number of People</label>
+        <input class="input" id="people" type="text">
+      </div>
+      <div class="summary">
+        <div class="summary__content">
+          <p class="summary__text">Tip Amount <br>/ person</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
