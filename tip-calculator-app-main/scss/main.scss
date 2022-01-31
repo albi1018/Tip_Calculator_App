@@ -31,16 +31,18 @@ body {
     min-height: 80vh;
     background-color: #FFF;
     margin-top: 2.5rem;
-    padding: 3.5rem;
+    padding: 2.5rem 0;
     border-radius: 2rem;
 
     & .bill {
       display: flex;
       flex-direction: column;
+      padding: 2.5rem;
 
     }
 
     & .selectTip {
+      padding: 3.5rem;
 
       &__buttons {
         //display: flex;
@@ -73,19 +75,51 @@ body {
       display: flex;
       flex-direction: column;
       margin-top: 1.5rem;
+      padding: 2.5rem;
+
+      & .numberOfPeopleTexts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .errorMessage {
+          display: none;
+        }
+
+        & .errorMessage.show {
+          display: block;
+          font-size: 1.5rem;
+          color: red;
+        }
+      }
     }
 
     & .summary {
-      display: flex;
-      flex-direction: column;
+
       margin-top: 1.5rem;
       background-color: $VeryDarkCyan;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
 
       &__content {
-        display: flex;
+        display: grid;
+        grid-template-rows:  1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
 
         & .summary__text {
           color: #FFFFFF;
+          font-size: 1.3rem;
+          span {
+            color: $DarkGrayishCyan;
+          }
+        }
+
+        & .summary__number {
+          color: $primary;
+          font-size: 2.3rem;
+          text-align: right;
         }
       }
     }

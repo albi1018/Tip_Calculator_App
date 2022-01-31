@@ -27,32 +27,38 @@
         <p class="label">Select Tip %</p>
         <div class="selectTip__buttons">
           <div class="button__container">
-            <button class="btn">5%</button>
+            <button class="btn" data="5%">5%</button>
           </div>
           <div class="button__container">
-            <button class="btn">10%</button>
+            <button class="btn" data="10%">10%</button>
           </div>
           <div class="button__container">
-            <button class="btn">15%</button>
+            <button class="btn" data="15%">15%</button>
           </div>
           <div class="button__container">
-            <button class="btn">25%</button>
+            <button class="btn" data="25%">25%</button>
           </div>
           <div class="button__container">
-            <button class="btn">50%</button>
+            <button class="btn" data="50%">50%</button>
           </div>
           <div class="button__container">
-            <input class="selectTip__input" placeholder="Custom" input type="text">
+            <input class="selectTip__input" placeholder="Custom" type="text">
           </div>
         </div>
       </div>
       <div class="numberOfPeople">
-        <label class="label" for="people">Number of People</label>
+        <div class="numberOfPeopleTexts">
+          <label class="label" for="people">Number of People</label>
+          <p class="errorMessage show">Can't be zero</p>
+        </div>
         <input class="input" id="people" type="text">
       </div>
       <div class="summary">
         <div class="summary__content">
-          <p class="summary__text">Tip Amount <br>/ person</p>
+          <p class="summary__text">Tip Amount <br><span>/ person</span></p>
+          <p class="summary__number amount">$0.00</p>
+          <p class="summary__text">Total <br><span>/ person</span></p>
+          <p class="summary__number total">$0.00</p>
         </div>
       </div>
     </div>
