@@ -1,5 +1,5 @@
 //ALL ELEMENTS//
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".btn");
 const billInput = document.querySelector(".bill__input");
 const customInput = document.querySelector(".selectTip__input");
 const peopleInput = document.getElementById('people');

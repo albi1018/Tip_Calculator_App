@@ -43,13 +43,12 @@ html {
 }
 
 body {
-  background-color: #26c0ab;
+  background-color: #e9f4f6;
 }
 
 #spliter .logo__container {
   display: flex;
   justify-content: center;
-  background-color: #26c0ab;
   margin-top: 2rem;
 }
 #spliter .calc__container {
@@ -130,6 +129,21 @@ body {
   font-size: 2.3rem;
   text-align: right;
 }
+#spliter .calc__container .summary__button {
+  display: flex;
+}
+#spliter .calc__container .summary__button .summary__btn {
+  width: 80%;
+  padding: 1.5rem;
+  background-color: #00666b;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-family: "Space Mono";
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+}
 
 @media (min-width: 800px) {
   #spliter .calc__container {
@@ -158,6 +172,9 @@ body {
     font-size: 1.3rem;
   }
   #spliter .calc__container .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
     margin: 2.5rem 2.5rem 1rem;
   }

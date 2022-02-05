@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: $primary;
+  background-color: $LightGrayishCyan;
 }
 
 #spliter {
@@ -22,7 +22,6 @@ body {
   & .logo__container {
     display: flex;
     justify-content: center;
-    background-color: $primary;
     margin-top: 2rem;
   }
 
@@ -121,6 +120,21 @@ body {
         }
       }
     }
+    & .summary__button {
+        display: flex;
+      & .summary__btn {
+        width: 80%;
+        padding: 1.5rem;
+        background-color: $VeryDarkCyan2;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        font-family: 'Space Mono';
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 1rem;
+      }
+    }
   }
 }
 
@@ -158,6 +172,9 @@ body {
      }
 
      & .summary {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
        width: 50%;
        margin: 2.5rem 2.5rem 1rem;
      }
