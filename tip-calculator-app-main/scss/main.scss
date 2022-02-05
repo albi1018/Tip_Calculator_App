@@ -27,22 +27,20 @@ body {
   }
 
   & .calc__container {
-    max-width: 100%;
-    min-height: 80vh;
+    max-width: 475px;
     background-color: #FFF;
-    margin-top: 2.5rem;
-    padding: 2.5rem 0;
+    margin: 2.5rem auto 0;
+    padding: 2.5rem 0 0;
     border-radius: 2rem;
 
     & .bill {
       display: flex;
       flex-direction: column;
       padding: 2.5rem;
-
     }
 
     & .selectTip {
-      padding: 3.5rem;
+      padding: 2.5rem;
 
       &__buttons {
         //display: flex;
@@ -122,6 +120,83 @@ body {
           text-align: right;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+ #spliter {
+   & .calc__container {
+     display: flex;
+     width: 80vw;
+     max-width: 1024px;
+
+     & .set__container {
+       width: 50%;
+       margin-top: 2.5rem;
+
+       & .bill {
+         padding: 0 2.5rem;
+       }
+
+       & .selectTip {
+         padding: .5rem 2.5rem;
+       }
+
+       & .numberOfPeople {
+         padding: .5rem 2.5rem;
+
+         & .numberOfPeopleTexts {
+           flex-direction: column;
+           align-items: flex-start;
+
+           & .errorMessage.show {
+             font-size: 1.3rem;
+           }
+         }
+       }
+     }
+
+     & .summary {
+       width: 50%;
+       margin: 2.5rem 2.5rem 1rem;
+     }
+   }
+  }
+ }
+
+@media (min-width: 1024px) {
+  #spliter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    & .calc__container {
+
+      & .set__container {
+
+        & .selectTip__buttons {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+
+          & .button__container {
+
+            & .btn {
+              cursor: pointer;
+            }
+          }
+        }
+
+        & .numberOfPeople {
+
+          & .numberOfPeopleTexts {
+            flex-direction: row;
+          }
+        }
+      }
+
     }
   }
 }

@@ -53,11 +53,10 @@ body {
   margin-top: 2rem;
 }
 #spliter .calc__container {
-  max-width: 100%;
-  min-height: 80vh;
+  max-width: 475px;
   background-color: #FFF;
-  margin-top: 2.5rem;
-  padding: 2.5rem 0;
+  margin: 2.5rem auto 0;
+  padding: 2.5rem 0 0;
   border-radius: 2rem;
 }
 #spliter .calc__container .bill {
@@ -66,7 +65,7 @@ body {
   padding: 2.5rem;
 }
 #spliter .calc__container .selectTip {
-  padding: 3.5rem;
+  padding: 2.5rem;
 }
 #spliter .calc__container .selectTip__buttons {
   display: grid;
@@ -130,5 +129,56 @@ body {
   color: #26c0ab;
   font-size: 2.3rem;
   text-align: right;
+}
+
+@media (min-width: 800px) {
+  #spliter .calc__container {
+    display: flex;
+    width: 80vw;
+    max-width: 1024px;
+  }
+  #spliter .calc__container .set__container {
+    width: 50%;
+    margin-top: 2.5rem;
+  }
+  #spliter .calc__container .set__container .bill {
+    padding: 0 2.5rem;
+  }
+  #spliter .calc__container .set__container .selectTip {
+    padding: 0.5rem 2.5rem;
+  }
+  #spliter .calc__container .set__container .numberOfPeople {
+    padding: 0.5rem 2.5rem;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts .errorMessage.show {
+    font-size: 1.3rem;
+  }
+  #spliter .calc__container .summary {
+    width: 50%;
+    margin: 2.5rem 2.5rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #spliter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  #spliter .calc__container .set__container .selectTip__buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #spliter .calc__container .set__container .selectTip__buttons .button__container .btn {
+    cursor: pointer;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts {
+    flex-direction: row;
+  }
 }
 /*# sourceMappingURL=main.css.map */

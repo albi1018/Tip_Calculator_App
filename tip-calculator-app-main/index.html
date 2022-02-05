@@ -19,46 +19,48 @@
       <img class="" src="images/logo.svg">
     </div>
     <div class="calc__container">
-      <div class="bill">
-        <label class="label" for="bill">Bill</label>
-        <input class="bill__input input" type="text" name="bill" id="bill">
-      </div>
-      <div class="selectTip">
-        <p class="label">Select Tip %</p>
-        <div class="selectTip__buttons">
-          <div class="button__container">
-            <button class="btn" data="5%">5%</button>
-          </div>
-          <div class="button__container">
-            <button class="btn" data="10%">10%</button>
-          </div>
-          <div class="button__container">
-            <button class="btn" data="15%">15%</button>
-          </div>
-          <div class="button__container">
-            <button class="btn" data="25%">25%</button>
-          </div>
-          <div class="button__container">
-            <button class="btn" data="50%">50%</button>
-          </div>
-          <div class="button__container">
-            <input class="selectTip__input" placeholder="Custom" type="text">
+      <div class="set__container">
+        <div class="bill">
+          <label class="label" for="bill">Bill</label>
+          <input class="bill__input input" type="text" name="bill" id="bill">
+        </div>
+        <div class="selectTip">
+          <p class="label">Select Tip %</p>
+          <div class="selectTip__buttons">
+            <div class="button__container">
+              <button class="btn" data="5%">5%</button>
+            </div>
+            <div class="button__container">
+              <button class="btn" data="10%">10%</button>
+            </div>
+            <div class="button__container">
+              <button class="btn" data="15%">15%</button>
+            </div>
+            <div class="button__container">
+              <button class="btn" data="25%">25%</button>
+            </div>
+            <div class="button__container">
+              <button class="btn" data="50%">50%</button>
+            </div>
+            <div class="button__container">
+              <input class="selectTip__input" placeholder="Custom" type="text">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="numberOfPeople">
-        <div class="numberOfPeopleTexts">
-          <label class="label" for="people">Number of People</label>
-          <p class="errorMessage show">Can't be zero</p>
+        <div class="numberOfPeople">
+          <div class="numberOfPeopleTexts">
+            <label class="label" for="people">Number of People</label>
+            <p class="errorMessage show">Can't be zero</p>
+          </div>
+          <input class="input" id="people" type="text">
         </div>
-        <input class="input" id="people" type="text">
       </div>
       <div class="summary">
         <div class="summary__content">
           <p class="summary__text">Tip Amount <br><span>/ person</span></p>
-          <p class="summary__number amount">$0.00</p>
+          <p class="summary__number" id="amount">$0.00</p>
           <p class="summary__text">Total <br><span>/ person</span></p>
-          <p class="summary__number total">$0.00</p>
+          <p class="summary__number" id="total">$0.00</p>
         </div>
       </div>
     </div>
