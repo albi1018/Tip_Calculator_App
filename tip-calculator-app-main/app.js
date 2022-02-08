@@ -6,12 +6,14 @@ const peopleInput = document.getElementById('people');
 const errorMessage = document.querySelector(".errorMessage");
 const amount = document.getElementById("amount");
 const total = document.getElementById("total");
+const reset = document.querySelector(".reset");
 //ALL ELEMENTS//
 
 //EVENTS//
 billInput.addEventListener("input", setBillValue);
 customInput.addEventListener("input", setCustomValue);
 peopleInput.addEventListener("input", setPeopleValue);
+reset.addEventListener('click', resetValues)
 //EVENTS//
 
 let billValue = 0.0;
@@ -29,13 +31,12 @@ function validateCustomValue(s) {
 }
 
 function setBillValue() {
+    resetActive();
     if (validateBillValue(billInput.value)) {
         billValue = parseFloat(billInput.value);
         billInput.style.border = '1px solid transparent'
-        console.log(billValue);
         if (billInput.value.includes(',')) {
             billValue = parseFloat(billInput.value.replaceAll(',', '.'))
-            console.log(billValue);
         }
         calculateTip();
     } else {
@@ -45,27 +46,27 @@ function setBillValue() {
 
 buttons.forEach(btn => {
     btn.addEventListener('click', function(e) {
-        buttons.forEach(btn => btn.classList.remove('active'));
+        resetActive();
         if (this.classList.contains('active')) {
             this.classList.remove('active');
-            console.log(111);
+            reset.classList.remove('active');
+            buttonValue = 0.0;
         } else {
+            buttons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            console.log(2222);
+            buttonValue = parseFloat(this.innerHTML)/100;
+            customInput.value = '';
+            calculateTip();
         }
-        buttonValue = parseFloat(this.innerHTML)/100;
-        customInput.value = '';
-        console.log(buttonValue);
-        calculateTip();
     })
 })
 
 function setCustomValue() {
+    resetActive();
     if (validateCustomValue(customInput.value)) {
         customInput.style.border = '1px solid transparent'
         buttonValue = parseFloat(customInput.value)/100;
         buttons.forEach(btn => btn.classList.remove('active'));
-        console.log(buttonValue);
         calculateTip();
     } else {
         customInput.style.border = '1px solid red'
@@ -73,11 +74,11 @@ function setCustomValue() {
 }
 
 function setPeopleValue() {
+    resetActive();
     if (validateCustomValue(peopleInput.value)) {
         peopleValue = parseFloat(peopleInput.value);
         errorMessage.classList.remove('show');
         peopleInput.style.border = '1px solid transparent';
-        console.log(peopleValue);
         calculateTip();
     }
     else {
@@ -89,15 +90,41 @@ function setPeopleValue() {
 function calculateTip() {
     let amountNumber = billValue * buttonValue / peopleValue;
     let totalNumber = (billValue * buttonValue + billValue) / peopleValue;
-    if (isNaN(amountNumber)) {
-        console.log('nan');
+    if (isNaN(amountNumber) || amountNumber === Number.POSITIVE_INFINITY || amountNumber === Number.NEGATIVE_INFINITY) {
         amount.innerHTML = '$0.00'
+        total.innerHTML = '$0.00'
     } else {
         amount.innerHTML = '$' + amountNumber.toFixed(2);
         total.innerHTML = '$' + totalNumber.toFixed(2);
     }
 }
 
+function resetValues() {
+    billInput.value = '';
+    customInput.value = '';
+    peopleInput.value = '';
+    buttons.forEach(btn => btn.classList.remove('active'));
+    reset.classList.remove('active');
+    billValue = 0.0;
+    buttonValue = 0.0;
+    peopleValue = 0.0;
+    amount.innerHTML = '$0.00'
+    total.innerHTML = '$0.00'
+}
+
+function resetActive() {
+    // if (billValue !== '' || buttonValue !== '' || peopleValue !== '') {
+    //     reset.classList.add('active');
+    // } else {
+    //     reset.classList.remove('active');
+    // }
+
+    if (billInput.value !== '' || customInput.value !== '' || peopleInput.value !== '' || buttonValue !== '') {
+        reset.classList.add('active');
+    } else {
+        reset.classList.remove('active');
+    }
+}
 
 
 
