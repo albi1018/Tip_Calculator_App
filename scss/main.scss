@@ -1,0 +1,275 @@
+@import "variables";
+@import "input";
+@import "label";
+@import "button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: $FontPrimary;
+}
+
+body {
+  background-color: $LightGrayishCyan;
+}
+
+#spliter {
+
+  & .logo__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  & .calc__container {
+    max-width: 475px;
+    background-color: #FFF;
+    margin: 2.5rem auto 0;
+    padding: 2.5rem 0 0;
+    border-radius: 2rem;
+
+    & .bill {
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem;
+      position: relative;
+
+      & .bill__icon {
+        position: absolute;
+        top: 69px;
+        left: 33px;
+        width: 1.5rem;
+        height: 2rem;
+      }
+      & .bill__input {
+
+      }
+    }
+    & .selectTip {
+      padding: 2.5rem;
+
+      &__buttons {
+        display: grid;
+        grid-template-rows:  1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        margin-top: 1.5rem;
+
+        & .button__container {
+
+          & .selectTip__input {
+            width: 100%;
+            font-size: 1.8rem;
+            border: none;
+            background-color: $LightGrayishCyan;
+            padding: .7rem 1rem;
+            outline: none;
+            text-align: right;
+            border-radius: 1rem;
+            font-family: $FontPrimary;
+          }
+        }
+      }
+    }
+
+    & .numberOfPeople {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-top: 1.5rem;
+      padding: 2.5rem;
+
+      & .numberOfPeopleTexts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        & .errorMessage {
+          display: none;
+        }
+
+        & .errorMessage.show {
+          display: block;
+          font-size: 1.5rem;
+          color: red;
+        }
+      }
+
+      & .people__icon {
+        position: absolute;
+        top: 69px;
+        left: 33px;
+        width: 1.5rem;
+        height: 2rem;
+      }
+    }
+
+    & .summary {
+
+      margin-top: 1.5rem;
+      background-color: $VeryDarkCyan;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+
+      &__content {
+        display: grid;
+        grid-template-rows:  1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+
+        & .summary__text {
+          color: #FFFFFF;
+          font-size: 1.3rem;
+          span {
+            color: $DarkGrayishCyan;
+          }
+        }
+
+        & .summary__number {
+          color: $primary;
+          font-size: 2.5rem;
+          text-align: right;
+        }
+      }
+    }
+    & .summary__button {
+        display: flex;
+      & .summary__btn {
+        width: 80%;
+        padding: 1.5rem;
+        background-color: $VeryDarkCyan2;
+        color: $VeryDarkCyan;
+        margin: 5rem auto 0;
+        font-size: 1.4rem;
+        font-family: 'Space Mono';
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 1rem;
+      }
+
+      & .summary__btn.active {
+        background-color: $primary;
+        color: $VeryDarkCyan2;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media (min-width: 340px) {
+  #spliter {
+    & .calc__container {
+
+      & .numberOfPeople {
+
+        & .numberOfPeopleTexts {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+ #spliter {
+   & .calc__container {
+     display: flex;
+     width: 80vw;
+     max-width: 1024px;
+
+     & .set__container {
+       width: 50%;
+       margin-top: 2.5rem;
+
+       & .bill {
+         padding: 0 2.5rem;
+
+         & .bill__icon {
+           top: 43px;
+           left: 33px;
+         }
+       }
+
+       & .selectTip {
+         padding: .5rem 2.5rem;
+       }
+
+       & .numberOfPeople {
+         padding: .5rem 2.5rem;
+
+         & .numberOfPeopleTexts {
+           flex-direction: column;
+           align-items: flex-start;
+
+           & .errorMessage.show {
+             font-size: 1.3rem;
+           }
+         }
+
+       }
+     }
+
+     & .summary {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       width: 50%;
+       margin: 2.5rem 2.5rem 1rem;
+     }
+   }
+  }
+ }
+
+@media (min-width: 1024px) {
+  #spliter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    & .calc__container {
+
+      & .set__container {
+
+        & .selectTip__buttons {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+
+          & .button__container {
+
+            & .btn {
+              cursor: pointer;
+            }
+          }
+        }
+
+        & .numberOfPeople {
+
+          & .numberOfPeopleTexts {
+            flex-direction: row;
+          }
+
+          & .people__icon {
+            top: 50px;
+          }
+        }
+      }
+      
+      & .summary__content {
+        
+        & .summary__number {
+          font-size: 3.3rem;
+        }
+      }
+    }
+  }
+}

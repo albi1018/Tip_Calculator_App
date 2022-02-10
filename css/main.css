@@ -1,0 +1,240 @@
+.input {
+  background-color: #e9f4f6;
+  font-size: 16px;
+  font-family: "Space Mono";
+  padding: 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  text-align: right;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #808080;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #00494d;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 700;
+  font-family: "Space Mono";
+}
+
+.btn.active {
+  background-color: #26c0ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Space Mono";
+}
+
+body {
+  background-color: #e9f4f6;
+}
+
+#spliter .logo__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+#spliter .calc__container {
+  max-width: 475px;
+  background-color: #FFF;
+  margin: 2.5rem auto 0;
+  padding: 2.5rem 0 0;
+  border-radius: 2rem;
+}
+#spliter .calc__container .bill {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  position: relative;
+}
+#spliter .calc__container .bill .bill__icon {
+  position: absolute;
+  top: 69px;
+  left: 33px;
+  width: 1.5rem;
+  height: 2rem;
+}
+#spliter .calc__container .selectTip {
+  padding: 2.5rem;
+}
+#spliter .calc__container .selectTip__buttons {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 1.5rem;
+}
+#spliter .calc__container .selectTip__buttons .button__container .selectTip__input {
+  width: 100%;
+  font-size: 1.8rem;
+  border: none;
+  background-color: #e9f4f6;
+  padding: 0.7rem 1rem;
+  outline: none;
+  text-align: right;
+  border-radius: 1rem;
+  font-family: "Space Mono";
+}
+#spliter .calc__container .numberOfPeople {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 2.5rem;
+}
+#spliter .calc__container .numberOfPeople .numberOfPeopleTexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#spliter .calc__container .numberOfPeople .numberOfPeopleTexts .errorMessage {
+  display: none;
+}
+#spliter .calc__container .numberOfPeople .numberOfPeopleTexts .errorMessage.show {
+  display: block;
+  font-size: 1.5rem;
+  color: red;
+}
+#spliter .calc__container .numberOfPeople .people__icon {
+  position: absolute;
+  top: 69px;
+  left: 33px;
+  width: 1.5rem;
+  height: 2rem;
+}
+#spliter .calc__container .summary {
+  margin-top: 1.5rem;
+  background-color: #00494d;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+#spliter .calc__container .summary__content {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+#spliter .calc__container .summary__content .summary__text {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+}
+#spliter .calc__container .summary__content .summary__text span {
+  color: #7f9c9f;
+}
+#spliter .calc__container .summary__content .summary__number {
+  color: #26c0ab;
+  font-size: 2.5rem;
+  text-align: right;
+}
+#spliter .calc__container .summary__button {
+  display: flex;
+}
+#spliter .calc__container .summary__button .summary__btn {
+  width: 80%;
+  padding: 1.5rem;
+  background-color: #00666b;
+  color: #00494d;
+  margin: 5rem auto 0;
+  font-size: 1.4rem;
+  font-family: "Space Mono";
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+}
+#spliter .calc__container .summary__button .summary__btn.active {
+  background-color: #26c0ab;
+  color: #00666b;
+  font-weight: bold;
+}
+
+@media (min-width: 340px) {
+  #spliter .calc__container .numberOfPeople .numberOfPeopleTexts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  #spliter .calc__container {
+    display: flex;
+    width: 80vw;
+    max-width: 1024px;
+  }
+  #spliter .calc__container .set__container {
+    width: 50%;
+    margin-top: 2.5rem;
+  }
+  #spliter .calc__container .set__container .bill {
+    padding: 0 2.5rem;
+  }
+  #spliter .calc__container .set__container .bill .bill__icon {
+    top: 43px;
+    left: 33px;
+  }
+  #spliter .calc__container .set__container .selectTip {
+    padding: 0.5rem 2.5rem;
+  }
+  #spliter .calc__container .set__container .numberOfPeople {
+    padding: 0.5rem 2.5rem;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts .errorMessage.show {
+    font-size: 1.3rem;
+  }
+  #spliter .calc__container .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 2.5rem 2.5rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #spliter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  #spliter .calc__container .set__container .selectTip__buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #spliter .calc__container .set__container .selectTip__buttons .button__container .btn {
+    cursor: pointer;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .numberOfPeopleTexts {
+    flex-direction: row;
+  }
+  #spliter .calc__container .set__container .numberOfPeople .people__icon {
+    top: 50px;
+  }
+  #spliter .calc__container .summary__content .summary__number {
+    font-size: 3.3rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
