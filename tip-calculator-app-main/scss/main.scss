@@ -36,8 +36,19 @@ body {
       display: flex;
       flex-direction: column;
       padding: 2.5rem;
-    }
+      position: relative;
 
+      & .bill__icon {
+        position: absolute;
+        top: 69px;
+        left: 33px;
+        width: 1.5rem;
+        height: 2rem;
+      }
+      & .bill__input {
+
+      }
+    }
     & .selectTip {
       padding: 2.5rem;
 
@@ -69,6 +80,7 @@ body {
     & .numberOfPeople {
       display: flex;
       flex-direction: column;
+      position: relative;
       margin-top: 1.5rem;
       padding: 2.5rem;
 
@@ -87,6 +99,14 @@ body {
           font-size: 1.5rem;
           color: red;
         }
+      }
+
+      & .people__icon {
+        position: absolute;
+        top: 69px;
+        left: 33px;
+        width: 1.5rem;
+        height: 2rem;
       }
     }
 
@@ -114,7 +134,7 @@ body {
 
         & .summary__number {
           color: $primary;
-          font-size: 2.3rem;
+          font-size: 2.5rem;
           text-align: right;
         }
       }
@@ -171,6 +191,11 @@ body {
 
        & .bill {
          padding: 0 2.5rem;
+
+         & .bill__icon {
+           top: 43px;
+           left: 33px;
+         }
        }
 
        & .selectTip {
@@ -188,6 +213,7 @@ body {
              font-size: 1.3rem;
            }
          }
+
        }
      }
 
@@ -231,9 +257,19 @@ body {
           & .numberOfPeopleTexts {
             flex-direction: row;
           }
+
+          & .people__icon {
+            top: 50px;
+          }
         }
       }
-
+      
+      & .summary__content {
+        
+        & .summary__number {
+          font-size: 3.3rem;
+        }
+      }
     }
   }
 }

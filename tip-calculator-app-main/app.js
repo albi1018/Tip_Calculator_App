@@ -49,7 +49,9 @@ buttons.forEach(btn => {
         resetActive();
         if (this.classList.contains('active')) {
             this.classList.remove('active');
-            reset.classList.remove('active');
+            if (billInput.value === '' && peopleInput.value === '') {
+                reset.classList.remove('active');
+            }
             buttonValue = 0.0;
         } else {
             buttons.forEach(btn => btn.classList.remove('active'));
